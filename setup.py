@@ -7,7 +7,7 @@ setup(
     author="Simon Data",
     url="http://simondata.com",
     classifiers=["Programming Language :: Python :: 3 :: Only"],
-    py_modules=["tap_greenhouse"],
+    py_modules=["tap_greenhouse", "tap_greenhouse.streams"],
     install_requires=[
         "singer-python==5.2.0",
         'requests==2.18.4',
