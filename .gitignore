@@ -6,3 +6,5 @@
 .idea*
 *.egg-info/*
 *.pyc
+dist/
+build/

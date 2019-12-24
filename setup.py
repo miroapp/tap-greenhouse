@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-from setuptools import setup
+from setuptools import setup, find_packages
 setup(
     name="tap-greenhouse",
-    version="0.1.0",
+    version="0.1.1",
     description="Singer.io tap for extracting data",
     author="Simon Data",
     url="http://simondata.com",
     classifiers=["Programming Language :: Python :: 3 :: Only"],
-    py_modules=["tap_greenhouse"],
+    packages=find_packages(),
     install_requires=[
         "singer-python==5.2.0",
         'requests==2.18.4',
@@ -21,6 +21,5 @@ setup(
     [console_scripts]
     tap-greenhouse=tap_greenhouse:main
     """,
-    packages=["tap_greenhouse"],
     include_package_data=True,
 )
