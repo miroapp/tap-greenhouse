@@ -4,7 +4,7 @@ from tap_greenhouse.streams.jobstages import JobStagesStream
 from tap_greenhouse.streams.jobs import JobsStream
 from tap_greenhouse.streams.sources import SourcesStream
 from tap_greenhouse.streams.eeoc import EEOCStream
-
+from tap_greenhouse.streams.offers import OffersStream
 
 
 STREAMS = [
@@ -14,4 +14,5 @@ STREAMS = [
     JobsStream,
     SourcesStream,
     EEOCStream,
+    OffersStream
 ]
