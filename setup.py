@@ -15,7 +15,7 @@ setup(
         "tap-kit @ git+https://github.com/Radico/tap-kit.git@bc4b936975f679a5887891036570daf1bab01c64"
     ],
     dependency_links=[
-        "https://github.com/Radico/tap-kit/tarball/bc4b936975f679a5887891036570daf1bab01c64#egg=tap-kit-0.1.1",
+        "https://github.com/Radico/tap-kit/tarball/bc4b936975f679a5887891036570daf1bab01c64",
     ],
     entry_points="""
     [console_scripts]
