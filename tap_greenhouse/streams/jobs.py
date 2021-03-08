@@ -62,6 +62,13 @@ class JobsStream(Stream):
         ],
         "format": "date-time",
     },
+    "updated_at": {
+        "type": [
+            "null",
+            "string"
+        ],
+        "format": "date-time",
+    },
     "opened_at": {
         "type": [
             "null",
@@ -178,6 +185,26 @@ class JobsStream(Stream):
         "object"
       ],
       "properties": {
+        "employment_type": {"type": ["null", "string"]},
+        "bonus": {"type": ["null", "string"]},
+        "equity": {"type": ["null", "string"]},
+        "anticipated_start_month": {"type": ["null", "string"]},
+        "salary_grade": {"type": ["null", "string"]},
+        "headcount_approval_status": {"type": ["null", "string"]},
+        "headcount_type": {"type": ["null", "string"]},
+        "job_priority": {"type": ["null", "string"]},
+        "role_type": {"type": ["null", "string"]},
+        "stream": {"type": ["null", "string"]},
+        "fadv_account": {"type": ["null", "string"]},
+        "fadv_package": {"type": ["null", "string"]},
+        "salary_range": {
+          "type": ["null", "object"],
+          "properties": {
+            "min_value": {"type": ["null", "string"]},
+            "max_value": {"type": ["null", "string"]},
+            "unit": {"type": ["null", "string"]},
+          }
+        },
         "job_type": {
           "type": [
             "null",
@@ -210,6 +237,32 @@ class JobsStream(Stream):
       ],
       "properties": {
         "employment_type": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "properties": {
+            "name": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "type": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "value": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          }
+        },
+        "seniority_type": {
           "type": [
             "null",
             "object"
@@ -378,5 +431,3 @@ class JobsStream(Stream):
     }
   }
 }
-
-

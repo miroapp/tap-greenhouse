@@ -47,24 +47,48 @@ class ApplicationsStream(Stream):
             "format": "date-time",
         },
         "location": {
-            "properties": {
-            }
+            "type": ["null", "string"]
         },
         "source": {
+            "type": ["null", "object"],
             "properties": {
+                "public_name": {"type": ["null", "string"]},
+                "id": {"type": ["null", "number"]},
             }
         },
         "credited_to": {
+            "type": ["null", "object"],
             "properties": {
+                "name": {
+                    "type": ["null", "string"]
+                },
+                "id": {
+                    "type": ["null", "number"]
+                },
+                "employee_id": {
+                    "type": ["null", "number"]
+                },
             }
         },
         "rejection_reason": {
+            "type": ["null", "object"],
             "properties": {
+                "name": {
+                    "type": ["null", "string"],
+                },
+                "id": {
+                    "type": ["null", "number"],
+                },
             }
         },
         "rejection_details": {
-            "properties": {
-            }
+            "type": ["null", "object"],
+        },
+        "prospective_office": {
+            "type": ["null", "object"],
+        },
+        "prospective_department": {
+            "type": ["null", "object"],
         },
         "jobs": {
             "type": ["null", "array"]
@@ -73,13 +97,29 @@ class ApplicationsStream(Stream):
             "type": ["null", "string"]
         },
         "current_stage": {
-            "properties": {}
+            "type": ["null", "object"],
+            "properties": {
+                "name": {
+                    "type": ["null", "string"]
+                },
+                "id": {
+                    "type": ["null", "number"]
+                },
+            }
+        },
+        "attachments": {
+            "type": ["null", "array"],
         },
         "answers": {
             "type": ["null", "array"]
         },
         "prospect_detail": {
-            "properties": {}
+            "type": ["null", "object"],
+            "properties": {
+                "prospect_stage": {"type": ["null", "object"]},
+                "prospect_pool": {"type": ["null", "object"]},
+                "prospect_owner": {"type": ["null", "object"]}
+            }
         },
         "custom_fields": {
             "properties": {}
