@@ -47,7 +47,10 @@ class ApplicationsStream(Stream):
             "format": "date-time",
         },
         "location": {
-            "type": ["null", "string"]
+            "type": ["null", "object"],
+            "properties": {
+                "address": {"type": "string"}
+            }
         },
         "source": {
             "type": ["null", "object"],
@@ -91,7 +94,14 @@ class ApplicationsStream(Stream):
             "type": ["null", "object"],
         },
         "jobs": {
-            "type": ["null", "array"]
+            "type": ["null", "array"],
+            "items": {
+                "type": ["null", "object"],
+                "properties": {
+                    "id": {"type": ["null", "number"]},
+                    "name": {"type": ["null", "string"]}
+                }
+            }
         },
         "status": {
             "type": ["null", "string"]
@@ -109,6 +119,14 @@ class ApplicationsStream(Stream):
         },
         "attachments": {
             "type": ["null", "array"],
+            "items": {
+                "type": ["null", "object"],
+                "properties": {
+                    "filename": {"type": ["null", "string"]},
+                    "url": {"type": ["null", "string"]},
+                    "type": {"type": ["null", "string"]}
+                }
+            }
         },
         "answers": {
             "type": ["null", "array"]
