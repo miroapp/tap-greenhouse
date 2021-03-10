@@ -55,6 +55,9 @@ class CandidatesStream(Stream):
         "is_private": {
             "type": ["null", "boolean"]
         },
+        "can_email": {
+            "type": ["null", "boolean"]
+        },
         "photo_url": {
             "type": ["null", "string"]
         },
@@ -80,7 +83,43 @@ class CandidatesStream(Stream):
             "type": ["null", "array"]
         },
         "recruiter": {
+            "type": ["null", "object"],
             "properties": {
+                "name": {
+                    "type": ["null", "string"]
+                },
+                "last_name": {
+                    "type": ["null", "string"]
+                },
+                "first_name": {
+                    "type": ["null", "string"]
+                },
+                "id": {
+                    "type": ["null", "number"]
+                },
+                "employee_id": {
+                    "type": ["null", "number"]
+                },
+            }
+        },
+        "coordinator": {
+            "type": ["null", "object"],
+            "properties": {
+                "name": {
+                    "type": ["null", "string"]
+                },
+                "last_name": {
+                    "type": ["null", "string"]
+                },
+                "first_name": {
+                    "type": ["null", "string"]
+                },
+                "id": {
+                    "type": ["null", "number"]
+                },
+                "employee_id": {
+                    "type": ["null", "number"]
+                },
             }
         },
         "applications": {
